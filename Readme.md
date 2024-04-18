@@ -27,7 +27,7 @@ Now let's say after release1 is updated, the group starts go on working and one 
 However, another guy also update the feature1 file but in the release1 branch.
 And now one two branches are going to be merged, there will be a conflict happens.
 
-![git_conflict_example](/image/git_conflict_example.png>)
+![git_conflict_example](/image/git_conflict_example.png)
 
 If the console gives these notice, it means the merge has failed. 
 The files happening conflict will be added with the conflict message and be removed from the current git files.
