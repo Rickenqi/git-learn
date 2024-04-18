@@ -69,4 +69,4 @@ Add the fixed files and use `git rebase --continue` result.
 Skip is continuing the rebase progress anyway and abort is canceling the current rebase progress.
 
 After rebase, the history of feature2 will be deleted, which is different from merge.
-![alt text](<截屏2024-04-18 03.54.00.png>)
+![rebase_feature2_after](</image/rebase_feature2_after.png>)
