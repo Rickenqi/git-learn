@@ -11,7 +11,7 @@ This command is used to merge the content in one branch into the current branch.
 ### Merge example
 There are two branches here each with a "feature" file in it, which are feature1 and feature2.
 In the scenario made right here, the project includes two different feature functions which are feature1 and feature2.
-The final release eddition should contain both feature1 and feature2, and it can be achieved by using the merge command.
+The final release edition should contain both feature1 and feature2, and it can be achieved by using the merge command.
 
 ```shell
 git switch -c release1
@@ -40,4 +40,33 @@ git add [conflict_file_name]
 And then, the conflict of the merge is solved.
 In conclusion, when the merge conflict is happening, the file need to be add again as a sign telling git conflict has been solved.
 
+## Git Rebase
 
+### Rebase command
+
+After the feature1 is done by using git merge, it's time to update feature2.
+Feature2 is in similar situation, but there is one difference, feature2 hasn't been updated for quite a while.
+As a result, feature2 is way behind the latest version.
+
+![rebase_feature2_before](</image/rebase_feature2_before.png>)
+
+Now feature2 needs to be updated, and using rebase would be a good choice.
+```shell
+git rebase (--continue | --abort | --skip)
+```
+
+### Rebase conflict
+
+And conflicts still may happen, the feature2 has already been updated in two different branches.
+![git_rebase_conflict](</image/git_rebase_conflict.png>)
+
+Since there is conflict, the rebase progress has been paused.
+![git_rebase_pause](</image/git_rebase_pause.png>)
+
+The prompt in the terminal shows that when rebase starts, the git will be not in any branches.
+Three ways are suggested here, using continue is the same as merge.
+Add the fixed files and use `git rebase --continue` result.
+Skip is continuing the rebase progress anyway and abort is canceling the current rebase progress.
+
+After rebase, the history of feature2 will be deleted, which is different from merge.
+![alt text](<截屏2024-04-18 03.54.00.png>)
