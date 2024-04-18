@@ -1,4 +1,4 @@
-
+# Git Merge VS Rebase
 This project is sample for learning git commands.
 
 ## Git merge command
